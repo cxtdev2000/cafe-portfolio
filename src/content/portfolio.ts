@@ -39,7 +39,7 @@ export const about = {
   ],
   experienceTitle: "Kinh nghiệm",
   experience: [
-    { company: "SotaTek JSC", title: "Senior Full-Stack Developer", period: "05/2025 – nay" },
+    { company: "Global Technology Solutions", title: "Senior Full-Stack Developer", period: "05/2025 – nay" },
     { company: "Binh Minh Group (BMG)", title: "Lead / Senior Full-Stack Developer", period: "12/2023 – 05/2025" },
     { company: "Navisoft (Nam Viet Software)", title: "Frontend Developer", period: "04/2021 – 10/2022" },
     { company: "FPT Software", title: "Backend / Java Software Engineer", period: "10/2020 – 04/2021" },
@@ -81,7 +81,7 @@ export const projects: { title: string; items: Project[] } = {
     },
     {
       name: "Terrafuse – EV Charging IoT",
-      meta: "05/2025 – 02/2026 · Terrafuse (qua Sotatek) · Senior Full-Stack & Backend Architecture",
+      meta: "05/2025 – 02/2026 · Terrafuse · Senior Full-Stack & Backend Architecture",
       description:
         "Backend event-driven cho mạng sạc xe điện: 200.000 người dùng, 10.000 kết nối WebSocket OCPP đồng thời. Webhook ký HMAC, idempotency bằng Redis, retry + DLQ, ví trả trước và billing Stripe với ledger nguyên tử.",
       tags: ["Java / Node.js", "NestJS", "WebSocket", "Redis", "PostgreSQL", "Stripe", "AWS"],
