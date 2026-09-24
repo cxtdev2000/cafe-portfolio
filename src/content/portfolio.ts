@@ -70,6 +70,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Nền tảng học tập thích ứng dùng AI (LMS, gamification, chấm phát âm và hội thoại real-time) cho hàng nghìn học sinh khu vực Australasia. Tự thiết kế kiến trúc multi-app, Elasticsearch cho tìm kiếm bài học dưới 1 giây, tích hợp OpenAI, Azure Speech, ElevenLabs qua Kafka.",
       tags: ["React / Vite", "NestJS", "FastAPI", "Elasticsearch", "Kafka", "OpenAI", "AWS"],
+      href: "https://vietnest.au",
     },
     {
       name: "Horae Digital Passport",
@@ -92,6 +93,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Bot định tuyến lệnh độ trễ thấp: nhận webhook TradingView, xác thực payload và đặt lệnh trên MetaTrader 5. Hàng đợi Redis/BullMQ chịu tải lúc thị trường biến động, dashboard phân tích win-rate và drawdown.",
       tags: ["Node.js", "Python", "MetaTrader 5", "Redis / BullMQ", "WebSocket"],
+      href: "https://github.com/cxtdev2000/automt5",
     },
     {
       name: "PleaseSpeak V2",
@@ -107,6 +109,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Nền tảng phân tích crypto real-time: theo dõi danh mục, phân tích kỹ thuật, chat tích hợp. Elasticsearch cho tìm kiếm token và auto-complete, SSR Next.js cho SEO, triển khai và tối ưu trên AWS.",
       tags: ["Next.js", "Elasticsearch", "Firebase", "SignalR", "AWS"],
+      href: "https://tokenmetrics.com",
     },
     {
       name: "Stack Trading",
@@ -135,6 +138,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Hệ sinh thái quản lý phòng khám và telehealth: hồ sơ bệnh án điện tử chuẩn HIPAA, lịch khám tự động, thông báo real-time. Refactor sang Go và Next.js giảm 45% độ trễ API; mentor junior và dẫn dắt sprint.",
       tags: ["Next.js", "Go", "Flutter", "MySQL", "WebSocket", "Firebase"],
+      href: "https://kosenoba.com",
     },
     {
       name: "Uniscore & Flashscore",
@@ -142,6 +146,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Nền tảng tỉ số thể thao real-time cho hàng trăm nghìn người dùng đồng thời. Push engine SignalR/WebSocket/Redis Pub/Sub độ trễ dưới 1 giây; refactor sang Go và .NET tăng 2.5 lần throughput, giảm 50% CPU.",
       tags: ["Go", "Next.js", ".NET Core", "SignalR", "Redis", "SQL Server"],
+      href: "https://www.flashscore.com",
     },
     {
       name: "SuperCore – SSI Securities",
@@ -149,6 +154,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Hệ thống chứng khoán cơ sở và phái sinh: dẫn dắt frontend BO web, microservices Java 17/Spring Boot/gRPC cho xử lý lệnh, Elasticsearch tìm kiếm dưới 1 giây trên log giao dịch, streaming ticker bằng RxJS.",
       tags: ["Java 17", "Spring Boot", "gRPC", "Elasticsearch", "Angular 14", "Oracle"],
+      href: "https://iboard.ssi.com.vn",
     },
     {
       name: "VietinBank Capital",
@@ -156,6 +162,7 @@ export const projects: { title: string; items: Project[] } = {
       description:
         "Ứng dụng quản lý chứng khoán, giao dịch ngân hàng và chứng chỉ quỹ tích hợp iPay. REST API Spring Boot với gRPC cho mảng lưu ký và giám sát, web front-office Angular & Next.js, Elasticsearch cho tra cứu giao dịch.",
       tags: ["Java", "Spring Boot", "gRPC", "Angular", "Next.js", "Elasticsearch", "Oracle"],
+      href: "https://vietinbankcapital.vn",
     },
     {
       name: "Mobifone Analyse Home",
