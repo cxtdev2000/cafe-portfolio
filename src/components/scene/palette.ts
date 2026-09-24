@@ -1,0 +1,23 @@
+// Shared colors for the procedural café models. Mirrors the CSS theme tokens in globals.css.
+export const palette = {
+  floor: "#8a5a3b",
+  floorDark: "#6e4529",
+  wall: "#efe2cf",
+  wallAccent: "#c96f4a",
+  wood: "#a4724a",
+  woodDark: "#5b3a24",
+  counterTop: "#e9e4dc",
+  metal: "#b9bcc2",
+  metalDark: "#3d3f44",
+  cup: "#fbf7f0",
+  coffee: "#3b2416",
+  chalkboard: "#2f3a33",
+  chalk: "#f3efe6",
+  leaf: "#5f8f4e",
+  leafDark: "#3f6b35",
+  pot: "#c96f4a",
+  lampGlow: "#ffd9a0",
+  windowGlow: "#bfe0ff",
+  pastry: "#d9a35b",
+  berry: "#b8434f",
+} as const;
