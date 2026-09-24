@@ -1,7 +1,7 @@
 // Portfolio content — edit this file to personalize the site.
 // Every section key maps to a hotspot inside the 3D café scene.
 
-export type SectionId = "about" | "projects" | "contact";
+export type SectionId = "about" | "projects" | "shop" | "contact";
 
 export const profile = {
   name: "Cấn Xuân Tùng",
@@ -64,6 +64,14 @@ export type Project = {
 export const projects: { title: string; items: Project[] } = {
   title: "Dự án",
   items: [
+    {
+      name: "Trustinfy",
+      meta: "Sàn giao dịch sản phẩm số & dịch vụ · trustinfy.com",
+      description:
+        "Marketplace \"Mua tài nguyên bạn cần, thuê dịch vụ bạn muốn\": sản phẩm số, dịch vụ theo yêu cầu và freelance. Thanh toán tạm giữ (escrow) — tiền chỉ tới người bán khi người mua xác nhận, người bán xác minh eKYC, xử lý tranh chấp 24/7 và hoàn tiền minh bạch.",
+      tags: ["Marketplace", "Escrow payment", "eKYC", "Dispute resolution", "SSL 256-bit"],
+      href: "https://trustinfy.com",
+    },
     {
       name: "VietNEST",
       meta: "07/2025 – 01/2026 · ASIF · Lead Fullstack & AI Systems",
@@ -179,6 +187,33 @@ export const projects: { title: string; items: Project[] } = {
       tags: ["PHP / Laravel", "Node.js", "MySQL", "Apache", "CentOS"],
     },
   ],
+};
+
+export type ShopAisle = { icon: string; name: string; description: string };
+
+export const shop: {
+  title: string;
+  intro: string;
+  aisles: ShopAisle[];
+  promisesTitle: string;
+  promises: string[];
+  cta: { label: string; href: string };
+} = {
+  title: "Cửa hàng",
+  intro:
+    "Brew & Code không chỉ bán cà phê. Mọi mặt hàng của quán — từ sản phẩm số tới dịch vụ làm theo yêu cầu — đều được bày bán trên Trustinfy, sàn giao dịch mình xây dựng.",
+  aisles: [
+    { icon: "📦", name: "Sản phẩm số", description: "Mã nguồn, template, tài liệu — mua xong nhận ngay." },
+    { icon: "🛠️", name: "Dịch vụ theo yêu cầu", description: "Đặt làm riêng, trao đổi trực tiếp với người bán." },
+    { icon: "🤝", name: "Thuê freelancer", description: "Tìm người phù hợp cho từng đầu việc." },
+  ],
+  promisesTitle: "Mua sắm yên tâm",
+  promises: [
+    "Tiền được tạm giữ, chỉ chuyển cho người bán khi bạn xác nhận",
+    "Người bán đã xác minh danh tính eKYC",
+    "Hỗ trợ tranh chấp 24/7, hoàn tiền minh bạch",
+  ],
+  cta: { label: "Ghé cửa hàng trên Trustinfy", href: "https://trustinfy.com" },
 };
 
 export type ContactLink = { label: string; value: string; href: string };

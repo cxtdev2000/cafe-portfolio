@@ -1,4 +1,4 @@
-import { about, contact, projects, type SectionId } from "@/content/portfolio";
+import { about, contact, projects, shop, type SectionId } from "@/content/portfolio";
 
 /** Renders the HTML body for a café section. Content comes from src/content/portfolio.ts. */
 export function SectionContent({ id }: { id: SectionId }) {
@@ -70,6 +70,46 @@ export function SectionContent({ id }: { id: SectionId }) {
           </li>
         ))}
       </ul>
+    );
+  }
+
+  if (id === "shop") {
+    return (
+      <>
+        <p className="leading-relaxed text-espresso/80">{shop.intro}</p>
+        <ul className="grid gap-3 pt-2">
+          {shop.aisles.map((aisle) => (
+            <li key={aisle.name} className="flex items-start gap-3 rounded-2xl border border-espresso/10 bg-white/60 p-4">
+              <span className="text-2xl leading-none" aria-hidden>
+                {aisle.icon}
+              </span>
+              <div>
+                <p className="font-medium text-espresso">{aisle.name}</p>
+                <p className="text-sm text-espresso/70">{aisle.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <h3 className="pt-4 font-display text-xl text-espresso">{shop.promisesTitle}</h3>
+        <ul className="space-y-2">
+          {shop.promises.map((promise) => (
+            <li key={promise} className="flex gap-2 text-sm leading-relaxed text-espresso/80">
+              <span className="text-caramel" aria-hidden>
+                ✓
+              </span>
+              {promise}
+            </li>
+          ))}
+        </ul>
+        <a
+          href={shop.cta.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-2 flex items-center justify-center gap-2 rounded-full bg-caramel px-5 py-3 font-medium text-cream shadow-lg transition hover:-translate-y-0.5 hover:bg-espresso"
+        >
+          {shop.cta.label} →
+        </a>
+      </>
     );
   }
 

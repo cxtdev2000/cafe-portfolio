@@ -1,11 +1,12 @@
 "use client";
 
-import { about, contact, projects, type SectionId } from "@/content/portfolio";
+import { about, contact, projects, shop, type SectionId } from "@/content/portfolio";
 import { SectionContent } from "./section-content";
 
 const titles: Record<SectionId, string> = {
   about: about.title,
   projects: projects.title,
+  shop: shop.title,
   contact: contact.title,
 };
 
@@ -21,7 +22,7 @@ export function SectionPanel({ section, onClose }: SectionPanelProps) {
   return (
     <aside
       aria-hidden={!open}
-      className={`fixed inset-x-3 bottom-3 z-20 max-h-[60vh] overflow-y-auto rounded-3xl bg-cream/95 p-6 shadow-2xl backdrop-blur transition-all duration-700 md:inset-x-auto md:top-24 md:right-8 md:bottom-8 md:max-h-none md:w-[420px] md:p-8 ${
+      className={`fixed inset-x-3 bottom-3 z-20 max-h-[55vh] overflow-y-auto rounded-3xl bg-cream/95 p-6 shadow-2xl backdrop-blur transition-all duration-700 md:inset-x-auto md:top-24 md:right-8 md:bottom-8 md:max-h-none md:w-[420px] md:p-8 ${
         open ? "translate-y-0 opacity-100 md:translate-x-0" : "pointer-events-none translate-y-8 opacity-0 md:translate-x-8 md:translate-y-0"
       }`}
     >

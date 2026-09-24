@@ -49,6 +49,52 @@ body {
   transform: translateY(-3px);
 }
 
+/* Lift the WebGL canvas above the TV's YouTube layer (z-index 0) but below labels (10+), so the in-scene
+   occluder decides what covers the video. R3F listens on the outer wrapper, so the canvas and its inner div can
+   ignore pointers and let taps reach the focused TV. */
+.scene-canvas > div {
+  pointer-events: none;
+}
+
+.scene-canvas canvas {
+  position: relative;
+  z-index: 1;
+}
+
+/* Speech bubble that pops over a poked prop (cat, plants, tip jar…). */
+.poke-bubble {
+  display: block;
+  white-space: nowrap;
+  border-radius: 9999px;
+  background: var(--color-cream);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  color: var(--color-espresso);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--color-espresso) 35%, transparent);
+  animation: poke-pop 1.8s ease-out both;
+}
+
+@keyframes poke-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.6);
+  }
+  12% {
+    opacity: 1;
+    transform: translateY(0) scale(1.06);
+  }
+  20% {
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+}
+
 /* Steam wisps above the loading-screen cup. */
 .loader-steam {
   position: absolute;
@@ -78,5 +124,10 @@ body {
   .loader-steam {
     animation: none;
     opacity: 0.6;
+  }
+
+  .poke-bubble {
+    animation-name: fade-in;
+    animation-duration: 0.3s;
   }
 }

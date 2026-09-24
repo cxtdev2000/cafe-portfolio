@@ -1,10 +1,11 @@
 "use client";
 
-import { about, contact, profile, projects, type SectionId } from "@/content/portfolio";
+import { about, contact, profile, projects, shop, type SectionId } from "@/content/portfolio";
 
 const navItems: { id: SectionId; label: string }[] = [
   { id: "about", label: about.title },
   { id: "projects", label: projects.title },
+  { id: "shop", label: shop.title },
   { id: "contact", label: contact.title },
 ];
 
@@ -19,7 +20,7 @@ type SiteNavProps = {
 export function SiteNav({ visible, active, onSelect, onHome }: SiteNavProps) {
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-20 flex items-center justify-between px-5 py-4 transition-opacity delay-700 duration-700 md:px-8 ${
+      className={`fixed inset-x-0 top-0 z-20 flex flex-wrap items-center justify-between gap-3 px-5 py-4 transition-opacity delay-700 duration-700 md:px-8 ${
         visible ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
@@ -36,7 +37,7 @@ export function SiteNav({ visible, active, onSelect, onHome }: SiteNavProps) {
             type="button"
             onClick={() => onSelect(item.id)}
             aria-current={active === item.id ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm transition md:px-4 ${
+            className={`whitespace-nowrap rounded-full px-2.5 py-1.5 text-[13px] sm:px-3 sm:text-sm transition md:px-4 ${
               active === item.id ? "bg-cream text-espresso" : "text-cream/80 hover:text-cream"
             }`}
           >
