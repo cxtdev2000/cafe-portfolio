@@ -9,22 +9,39 @@ export const profile = {
   cafeName: "Brew & Code",
 };
 
+// Chalkboard menu behind the counter: each "drink" is a technology, priced in years of hands-on experience.
+export const menuBoard = {
+  coffee: [
+    ["Node.js Espresso", "7 năm"],
+    ["Next.js Cold Brew", "5 năm"],
+    ["TypeScript Latte", "6 năm"],
+    ["NestJS Americano", "4 năm"],
+    ["React Mocha", "6 năm"],
+  ],
+  specials: [
+    ["Redis Affogato", "5 năm"],
+    ["Postgres Macchiato", "5 năm"],
+    ["AWS Cold Foam", "4 năm"],
+    ["GenAI Frappé", "3 năm"],
+    ["Three.js Tonic", "3 năm"],
+  ],
+} satisfies Record<string, [string, string][]>;
+
 export type Experience = { company: string; title: string; period: string };
 
 export const about = {
   title: "Giới thiệu",
   paragraphs: [
-    "Xin chào! Mình là Cấn Xuân Tùng — Senior Full-Stack Developer với hơn 6 năm kinh nghiệm xây dựng hệ thống phân tán cho doanh nghiệp, kiến trúc cloud-native và ứng dụng web hiệu năng cao.",
-    "Thế mạnh của mình là Java (Spring Boot, Spring Cloud), Angular, React/Next.js cùng Node.js và Go; thiết kế REST/GraphQL API và microservices, tối ưu tìm kiếm với Elasticsearch, triển khai hạ tầng trên AWS.",
+    "Xin chào! Mình là Cấn Xuân Tùng — Senior Full-Stack Developer với hơn 7 năm kinh nghiệm xây dựng hệ thống phân tán cho doanh nghiệp, kiến trúc cloud-native và ứng dụng web hiệu năng cao.",
+    "Thế mạnh của mình là hệ sinh thái JavaScript/TypeScript: Node.js (NestJS, Express) và Next.js/React, bên cạnh Go và Java khi dự án cần; thiết kế REST/GraphQL API và microservices, tối ưu tìm kiếm với Elasticsearch, triển khai hạ tầng trên AWS.",
     "Mình cũng tích hợp Generative AI & LLM (OpenAI, Azure OpenAI, Claude, RAG) vào sản phẩm và dùng các công cụ AI-assisted như Cursor, GitHub Copilot, Claude Code để tăng tốc cho team.",
   ],
   skills: [
-    "Java / Spring Boot",
-    "Spring Cloud",
-    "Angular",
-    "React / Next.js",
-    "TypeScript",
     "Node.js / NestJS",
+    "Next.js / React",
+    "TypeScript",
+    "Angular",
+    "Java / Spring Boot",
     "Go",
     "Elasticsearch",
     "PostgreSQL",

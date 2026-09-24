@@ -1,5 +1,6 @@
 // Module-level canvas draw functions. They must stay stable references so
 // useCanvasTexture builds each texture once.
+import { menuBoard } from "@/content/portfolio";
 import { createRandom, handFont, roundedRect, scriptFont, type CanvasDraw } from "./canvas-texture";
 
 const woodTones = ["#8a5a3b", "#7a4d31", "#94633f", "#6e4529", "#86553a"];
@@ -170,23 +171,9 @@ export const drawMenuBoard: CanvasDraw = (ctx, w, h) => {
   ctx.font = `28px ${handFont}`;
   ctx.fillStyle = "#f3efe6";
   ctx.strokeStyle = "#f3efe6";
-  const left = [
-    ["Java Espresso", "6 năm"],
-    ["Spring Latte", "35k"],
-    ["Next.js Cold Brew", "39k"],
-    ["Go Americano", "29k"],
-    ["Angular Mocha", "42k"],
-  ];
-  const right = [
-    ["Kafka Macchiato", "45k"],
-    ["Redis Affogato", "49k"],
-    ["GenAI Frappé", "55k"],
-    ["Web3 Matcha", "52k"],
-    ["Elastic Tonic", "45k"],
-  ];
   const columnWidth = w / 2 - 120;
-  left.forEach(([name, price], index) => dottedRow(ctx, name, price, 70, 252 + index * 52, columnWidth));
-  right.forEach(([name, price], index) => dottedRow(ctx, name, price, w / 2 + 40, 252 + index * 52, columnWidth));
+  menuBoard.coffee.forEach(([name, price], index) => dottedRow(ctx, name, price, 70, 252 + index * 52, columnWidth));
+  menuBoard.specials.forEach(([name, price], index) => dottedRow(ctx, name, price, w / 2 + 40, 252 + index * 52, columnWidth));
 
   // Doodle: steaming cup + beans
   ctx.lineWidth = 4;
@@ -250,7 +237,7 @@ export const drawLaptopCode: CanvasDraw = (ctx, w, h) => {
   const lines: [string, string][][] = [
     [["const ", "#c792ea"], ["tung", "#82aaff"], [" = ", "#eeffff"], ["new ", "#c792ea"], ["Developer", "#ffcb6b"], ["({", "#eeffff"]],
     [["  role", "#f07178"], [": ", "#eeffff"], ['"Full-Stack"', "#c3e88d"], [",", "#eeffff"]],
-    [["  stack", "#f07178"], [": [", "#eeffff"], ['"Java"', "#c3e88d"], [", ", "#eeffff"], ['"Next.js"', "#c3e88d"], ["],", "#eeffff"]],
+    [["  stack", "#f07178"], [": [", "#eeffff"], ['"Node.js"', "#c3e88d"], [", ", "#eeffff"], ['"Next.js"', "#c3e88d"], ["],", "#eeffff"]],
     [["  coffee", "#f07178"], [": ", "#eeffff"], ["Infinity", "#f78c6c"], [",", "#eeffff"]],
     [["});", "#eeffff"]],
     [["", "#eeffff"]],
